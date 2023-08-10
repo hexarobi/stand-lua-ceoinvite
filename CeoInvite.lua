@@ -1,5 +1,6 @@
 -- CeoInvite
 -- Adds an "Invite to CEO/MC" option in the Players menu
+-- https://github.com/hexarobi/stand-lua-ceoinvite
 
 local SCRIPT_VERSION = "0.1"
 
@@ -64,3 +65,9 @@ players.add_command_hook(function(player_id)
 
     menu.attach_after(join_org_command, invite_org_command)
 end)
+
+menu.my_root():readonly("Version", SCRIPT_VERSION)
+menu.my_root():readonly("New player menu options now available", "While this script is running, an additional menu item is available within the Players menu.")
+--menu.my_root():action("Players Menu", {}, "", function()
+--    menu.ref_by_path("Players>Settings"):focus()
+--end)
